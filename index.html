@@ -15,6 +15,7 @@
 <body>
 
     <main>
+        <!-- main section -->
         <Section>
             <div class="first-grid">
                 <div class="macBook-image">
@@ -25,25 +26,44 @@
                     <p>Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-core GPU, and
                         16-core Neutral Engine 8GB unified memory 256GB SSD storage Two Thunderbolt/ USB 4 ports Magic
                         Mouse Magic Keyboard - US English</p>
+
+                    <!-- MEMORY -->
                     <br>
                     <br>
                     <h3>Memory</h3>
-                    <button class="button-design" onclick="">8GB unified Memory</button>
-                    <button class="button-design" onclick="">16GB unified Memory</button>
+                    <button class="button-design" id="memory-8GB" onclick="buttonEventHandler('memory','8GB',0)">8GB
+                        unified
+                        Memory</button>
+                    <button class="button-design" id="memory-16GB"
+                        onclick="buttonEventHandler('memory','16GB',180)">16GB unified
+                        Memory</button>
 
+                    <!-- STORAGE -->
                     <br>
                     <br>
                     <h3>Storage</h3>
-                    <button class="button-design" onclick="">256GB SSD Storage</button>
-                    <button class="button-design" onclick="">512GB SSD Storage</button>
-                    <button class="button-design" onclick="">1TB SSD Storage</button>
+                    <button class="button-design" id="storage-256GB"
+                        onclick="buttonEventHandler('storage','256GB',0)">256GB SSD
+                        Storage</button>
+                    <button class="button-design" id="storage-512GB"
+                        onclick="buttonEventHandler('storage','512GB',100)">512GB SSD
+                        Storage</button>
+                    <button class="button-design" id="storage-1TB" onclick="buttonEventHandler('storage','1TB',180)">1TB
+                        SSD
+                        Storage</button>
 
+                    <!-- DELIVERY -->
                     <br>
                     <br>
                     <h3>Choose your delivery option</h3>
-                    <button class="button-design" onclick="">Friday, Aug 25 FREE Prime Delivery</button>
-                    <button class="button-design" onclick="">Friday, Aug 21 Delivery charge $20</button>
+                    <button class="button-design" id="delivery-free"
+                        onclick="buttonEventHandler('delivery','free',0)">Friday, Aug 25
+                        FREE Prime Delivery</button>
+                    <button class="button-design" id="delivery-fast"
+                        onclick="buttonEventHandler('delivery','fast',20)">Friday, Aug 21
+                        Delivery charge $20</button>
 
+                    <!-- PRICE LIST -->
                     <br>
                     <br>
                     <br>
@@ -58,10 +78,10 @@
                             </div>
 
                             <div class="col-4">
-                                <h5>$<span>1299<span></h5>
-                                <h5>$<span>0<span></h5>
-                                <h5>$<span>0<span></h5>
-                                <h5>$<span>0<span></h5>
+                                <h5>$<span id="best-price">1299<span></h5>
+                                <h5>$<span id="memory-cost">0<span></h5>
+                                <h5>$<span id="storage-cost">0<span></h5>
+                                <h5>$<span id="delivery-cost">0<span></h5>
                             </div>
                         </div>
                     </div>
@@ -72,26 +92,28 @@
                             <h5>Total Price </h5>
                         </div>
                         <div class="col-4">
-                            <h5>$<span>1299<span></h5>
+                            <h5>$<span id="total-price">1299<span></h5>
                         </div>
 
                     </div>
+
+                    <!-- PROMO CODE -->
                     <br>
                     <h3>Add Promo Code</h3>
                     <div>
 
-                        <input type="text">
-                        <button onclick="" class="btn btn-danger">Apply</button>
+                        <input id="promo-code" type="text">
+                        <button onclick="codeValidation(false)" class="btn btn-danger">Apply</button>
 
                     </div>
                 </div>
             </div>
         </Section>
+        <!-- Bottom Section -->
         <section class="first-section">
             <hr>
-            <h1 class="text-center">Total :$ <span>1290</span>
+            <h1 class="text-center">Total : $<span id="net-total-price">1290</span>
             </h1>
-            <br>
             <br>
         </section>
 
